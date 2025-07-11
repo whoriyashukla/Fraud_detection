@@ -30,6 +30,10 @@ st.title("🔍 Retail Credit Card Fraud Detection")
 st.markdown("Upload transaction data and predict fraud using a trained Random Forest model.")
 
 # Upload
+st.markdown("### 📥 Need Sample Data?")
+with open("sample_transactions.csv", "rb") as f:
+    st.download_button("⬇️ Download Sample CSV", f, file_name="sample_transactions.csv", mime="text/csv")
+
 uploaded_file = st.file_uploader("📁 Upload a CSV file with the required features", type=["csv"])
 
 if uploaded_file is not None:
